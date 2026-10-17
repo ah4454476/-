@@ -1,0 +1,30 @@
+---
+title: "Classic Italian Margherita Pizza"
+category: "Italian, Pizza, Vegetarian"
+description: "Learn how to make an authentic homemade Margherita pizza with fresh mozzarella, basil, and a perfectly crisp crust."
+keywords: "margherita pizza, italian pizza recipe, homemade pizza, vegetarian recipes"
+date: "2026-10-17"
+---
+
+![Classic Italian Margherita Pizza](https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg)
+
+Nothing beats the taste of a **Classic Italian Margherita Pizza**. Simple ingredients combined to create pure culinary perfection!
+
+## 🎥 Watch Video Tutorial
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 🍳 Ingredients
+* 1 Pizza dough base
+* 1/2 cup Tomato pizza sauce
+* 150g Fresh Mozzarella cheese (sliced)
+* Fresh Basil leaves
+* 1 tbsp Extra virgin olive oil
+* Pinch of salt
+
+## 🔪 Instructions
+1. Preheat your oven to its maximum temperature (220°C / 425°F).
+2. Stretch the pizza dough onto a baking tray or pizza stone.
+3. Spread tomato sauce evenly across the dough, leaving a thin border around the edge.
+4. Place fresh mozzarella slices on top.
+5. Bake for 10-12 minutes until crust is golden and cheese is bubbly.
+6. Top with fresh basil leaves and drizzle olive oil before serving.
