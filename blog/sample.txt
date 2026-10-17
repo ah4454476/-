@@ -1,0 +1,18 @@
+
+---
+title: "Title2"
+category: "Appetizer, Brunch, Chicken, Dinner, Fast Food, High Protein, Homemade, Japanese, Lunch, Side Dish, Snacks, Supper"
+description: "Looking for a quick snack? Try this Easy Japanese Rice Balls Recipe! Crispy on the outside, cheesy on the inside, perfect for kids and parties."
+keywords: "crispy rice balls, cheese stuffed, japanese recipe, quick snacks"
+date: "2020-10-17"
+---
+
+<table class="rcp-meta-table">
+<tr><td><strong>Prep:</strong> 20 Minutes</td></tr>
+<tr><td><strong>Cook:</strong> 35 Minutes</td></tr>
+<tr><td><strong>Number of People:</strong> 5 Serves</td></tr>
+</table>
+<br />
+<img src="url" alt="Title2" class="my-img" />
+<br />
+
