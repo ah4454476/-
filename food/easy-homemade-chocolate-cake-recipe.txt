@@ -1,0 +1,66 @@
+
+---
+title: "Easy Homemade Chocolate Cake Recipe - Step by Step Guide"
+category: "American, Bakery, Continental, Dessert, Homemade, Snacks"
+description: "Make the best and easiest chocolate cake at home. Try this step-by-step easy recipe now."
+keywords: "All-purpose flour, eggs, sugar, cooking chocolate, cocoa powder, coffee, vanilla extract, butter, antioxidants, protein, brown sugar, refrigerate"
+date: "2020-10-17"
+---
+
+<table class="rcp-meta-table">
+<tr><td><strong>Prep:</strong> 15 Minutes</td></tr>
+<tr><td><strong>Cook:</strong> 25 Minutes</td></tr>
+<tr><td><strong>Number of People:</strong> 3-4 Serves</td></tr>
+</table>
+<br />
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-iMTNXWHQBN87DXJYqkCNg3ieozjpIXB7o5GSRIBDQL1rxk9MdDs30gZp9pMvNETjdLB1-z0WiZzEqeenn2Bv8IjPt_qDPDi691XAt9zfJhZHNBbXPQl5Eyc5xjIQV-OfM0C786J7LfyOB2uv5OOpIBXrBy6CvFRVtVRoujtgbF8Dl9hK_W_l5s04iyc/s1376/easy-homemade-chocolate-cake-recipe-step-by-step-guide.webp" alt="Easy Homemade Chocolate Cake Recipe - Step by Step Guide" class="my-img" />
+<br />
+<h3>Ingredients</h3>
+    <menu>
+			<li>All-purpose flour three-quarters cup or 90g</li>
+            <li>3 eggs</li>
+            <li>1 cup sugar</li>
+            <li>100g cooking chocolate</li>
+            <li>1 tablespoon cocoa powder</li>
+            <li>1 tablespoon coffee</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>1/2 cup margarine or butter</li>
+            <li>1/2 cup cooking oil</li>
+   </menu>
+    <hr />
+
+<h3>Instructions - Step by Step</h3>
+        
+        <menu>
+        <li>Sift the flour. Bring the eggs to room temperature 15-20 minutes in advance, then separate the whites from the yolks. Chop the cooking chocolate into small pieces.</li>
+        
+        <li>Preheat the oven to 180°C fifteen to twenty minutes in advance and grease a round cake pan or separate small pans.</li>
+        
+        <li>In a glass bowl, combine a quarter cup of water, the chocolate pieces, cocoa powder, coffee, and margarine or butter, and mix over simmering water.</li>
+        
+        <li>When everything is combined, remove from the heat and stir in the cooking oil and vanilla essence.</li>
+        
+        <li>Separately beat the egg whites and yolks, then combine them and add the sugar, beating with an electric mixer until they form a creamy consistency.</li>
+        
+        <li>Add the chocolate paste to this mixture and mix both thoroughly. Then, beat in the flour a little at a time.</li>
+        
+        <li>Pour this mixture into the prepared cake pan and place it in the oven. This cake will need at least one hour to bake.</li>
+        
+        <li>Check with a toothpick or a matchstick and remove from the oven.</li>
+        
+        <li>Once completely cool, remove from the pan and, if desired, decorate the top with a little melted cooking chocolate.</li>
+
+</menu>
+
+
+<br />
+
+<h4>For Nutritional And Health Benefits</h4>
+<p> While this chocolate cake is loved for its amazing taste, eating it in moderation also brings out some important health benefits. The pure cocoa powder and cooking chocolate included in this recipe contain natural antioxidants that help reduce inflammation in the body and improve heart health. Chocolate in particular stimulates chemicals in the brain that make the mood happy and reduce stress. In addition, eggs are an excellent source of protein and essential amino acids, which are essential for muscle growth and physical energy. The use of coffee not only enhances the traditional taste of chocolate, but it also helps to speed up the metabolism. Although this dish is high in sugar and fat, eating a suitable piece of it occasionally as part of a balanced diet is a great way to maintain mental peace and physical energy. The key to a healthy lifestyle is moderation, so while enjoying this delicious cake, it is important to maintain a balance of vegetables and fruits in your other daily meals so that both health and taste can go hand in hand. </p>
+
+<h4> For Pro Tips And Substitute Ingredients </h4>
+<p> Here are some kitchen secrets to make this homemade cake perfectly soft and light as cotton. The most important thing is to take the eggs out of the refrigerator and bring them to room temperature beforehand because cold eggs do not allow the mixture to rise properly. When you beat the egg whites and yolks, make sure that air is incorporated well, which guarantees a soft cake. A common mistake that many people make is to use the mixer too much after adding the flour, which makes the cake tough, so the flour should always be folded in lightly. If you want to make this recipe even healthier and more nutritious, you can use fine-sifted wheat flour or oat flour instead of flour. Similarly, as an alternative to white sugar, you can use brown sugar or jaggery powder, which will not only give the cake a unique aroma but also increase its nutritional value, while coconut oil can also be an excellent and healthy alternative in place of butter. </p>
+
+<h4> For Serving And Storing </h4>
+<p> There is a specific way to serve and preserve this magnificent chocolate cake that doubles its enjoyment. When you serve it to your guests, it is a great choice to have fresh strawberries, raspberries or banana slices with it because the sour and sweet taste of the fruits balances the sweetness of the chocolate. Apart from this, serving it with lukewarm coffee, green tea or a glass of cold milk is considered a classic combination. If you have leftover cake, store it in any airtight container and refrigerate it so that it does not dry out and does not absorb the smell of other items in the refrigerator. This cake stays fresh for three to four days in the refrigerator. When you want to eat it again, instead of reheating the entire cake, just take out the desired piece and warm it lightly in the microwave for just ten to fifteen seconds. This will soften the chocolate again and restore the cake's crunchiness and moisture, just like it just came out of the oven. </p>
+
