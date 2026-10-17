@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let allPostsData = [];
 
-// Robust metadata parsing
+// Robust metadata parsing (Supports both Markdown and HTML images)
 function parsePostMeta(text, fileName) {
     let title = "Untitled";
     let category = "General";
@@ -41,8 +41,17 @@ function parsePostMeta(text, fileName) {
     } catch (e) {}
 
     let catArray = category ? category.split(',').map(c => c.trim()) : ['General'];
-    let imgMatch = text.match(/!\[.*?\]\((.*?)\)/);
-    let imageUrl = imgMatch ? imgMatch[1] : '';
+    
+    // Check for Markdown image format ![alt](url) OR HTML image format <img src="url">
+    let imageUrl = '';
+    let mdImgMatch = text.match(/!\[.*?\]\((.*?)\)/);
+    let htmlImgMatch = text.match(/<img[^>]+src=["']([^"']+)["']/i);
+
+    if (mdImgMatch) {
+        imageUrl = mdImgMatch[1];
+    } else if (htmlImgMatch) {
+        imageUrl = htmlImgMatch[1];
+    }
 
     return {
         fileName: fileName,
