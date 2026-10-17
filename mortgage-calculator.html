@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Online Mortgage Calculator</title>
+
+    <meta name="description" content="Calculate your monthly house payments easily with our free online mortgage calculator. Estimate principal, interest, terms, and compare loan options.>
+    <meta name="keywords" content="online mortgage calculator, mortgage calculator, home loan calculator, calculate mortgage payment, house payment calculator, monthly mortgage estimator, real estate calculator, amortization calculator, interest rate calculator, loan term calculator">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/countdown.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/countdown.js"></script>
+
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Online Mortgage Calculator</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+<div class="mortgage-calculator">
+  <h2>Mortgage Calculator</h2>
+  <label>Loan Amount ($):</label>
+  <input id="loanAmount" type="number" />
+
+  <label>Annual Interest Rate (%):</label>
+  <input id="interestRate" type="number" />
+
+  <label>Loan Term (Years):</label>
+  <select id="loanTerm">
+    <option value="">Select term</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+  </select>
+
+  <button id="calculateBtn">Calculate</button>
+
+  <div id="result"></div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/mortgage-calculator.css">
+<script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/mortgage-calculator.js"></script>
+
+<div>
+    <p><strong>This Calculator Empowers You:</strong></p>
+    <p><strong>Estimate Your Monthly Payments:</strong> By inputting the home price, your down payment, the loan term, and the interest rate, you can get an immediate estimate of your monthly mortgage payment. This helps you understand what you can realistically afford and set a budget that aligns with your financial goals.</p>
+    
+    <p><strong>Compare Different Scenarios:</strong> Ever wondered how a longer loan term or a slightly higher down payment would affect your payments? Our calculator allows you to easily adjust these variables. You can see how a 15 year mortgage compares to a 30 year one, or how saving up for a larger down payment could lead to significant savings in total interest over time.</p>
+    
+    <p><strong>Understand the Full Picture:</strong> A monthly mortgage payment is not just about principal and interest. It can also include property taxes, homeowners insurance, and private mortgage insurance (PMI). Our tool helps you factor in these critical costs, giving you a more comprehensive and accurate view of your total monthly housing expense.</p>
+    
+    <p>Making an informed decision is the first step toward a secure financial future. By using our mortgage calculator, you're not just getting an estimate; you're gaining valuable insight into your potential home loan, empowering you to plan ahead and make the best choice for you and your family.</p>
+</div>
+
+    </main>
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Countdown to America Day: The Story Behind US Independence</title>
+
+    <meta name="description" content="Track the exact time left until July 4th with our free US Independence Day countdown clock. Explore the history of the 1776 Declaration online.">
+    <meta name="keywords" content="us independence day countdown, 4th of july countdown, Fourth of July timer, july 4 live clock, tracking 4th july, american freedom day countdown, declaration of 1776 history, national day timer">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/countdown.css">
+<script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/countdown.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+      
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Countdown to America Day<br>The Story Behind US Independence</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+<!--🎉 Today's Event Countdown-->
+<section class="timer-box" id="todayEventCountdown">
+  <h2>U.S Independence Day Countdown!</h2>
+  <!--🔽 You can change this date-->
+  <div data-date="July 4" id="countDate"></div>
+
+  <div class="cdTmr">
+    <div class="cDown">
+      <span class="cdBox"><b class="days">00</b><small>Days</small></span>
+      <span class="cdBox"><b class="hours">00</b><small>Hours</small></span>
+      <span class="cdBox"><b class="minutes">00</b><small>Mins</small></span>
+      <span class="cdBox"><b class="seconds">00</b><small>Secs</small></span>
+    </div>
+  </div>
+   <!--✅ Greeting now included in HTML-->
+  <p class="msg">There are only days left</p>
+  <p class="greeting" style="display: none;">Happy US Day!</p>
+</section>
+
+<!--Simple, isolated styling so it is safe for Blogger templates-->
+
+<h2>A short history</h2>
+      <p>
+        America Day marks the moment the United States declared itself independent. The Continental Congress approved the Declaration of Independence on July 4, 1776. That document explained why the thirteen colonies would no longer accept British political control and introduced a set of ideas about human rights and government.
+      </p>
+
+      <h2>What the Declaration means</h2>
+      <p>
+        The Declaration asked that government respect certain basic rights. It named life, liberty, and the pursuit of happiness as fundamental. Though those guarantees did not apply equally to everyone at first, the document became the moral standard later reformers used to demand wider rights and reform.
+      </p>
+
+      <h2>How Americans observe the day</h2>
+      <p>
+        Today the Fourth of July is as much a social celebration as a historical observance. People gather for parades, neighborhood barbecues, and public events. The Red, White, and Blue appear everywhere. Fireworks close the day, a tradition that began during the first official celebrations in 1777.
+      </p>
+
+      <h2>Why it still matters</h2>
+      <p>
+        The day connects past and present. It honors the decision to pursue a new form of government and invites reflection on how well the country meets its founding promises. For many, America Day is both a festive summer moment and a call to keep working toward equality and freedom.
+      </p>
+</main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

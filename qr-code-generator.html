@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Free Online QR Code Generator</title>
+
+    <meta name="description" content="Generate custom QR codes instantly with our free online QR code generator. Create scan-able codes for links, text, Wi-Fi network details, and more.">
+    <meta name="keywords" content="qr code generator, free qr code generator, online qr code maker, create custom qr code, qr code generator for links, scan code creator, link to qr code converter, dynamic qr codes, digital qr maker">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+    <<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/qr-generator.css">
+<script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/qr-generator.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+      
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Free Online QR Code Generator <br> Create Custom QR Codes Instantly</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+
+<div class="qr-tool">
+  <h2>QR Code Generator</h2>
+  <p>Enter text or link to generate and save QR code directly on your computer.</p>
+  <input type="text" id="qrText" placeholder="Enter URL or text..." />
+  <button onclick="generateQR()">Generate QR</button>
+  <div class="qr-result" id="qrResult"></div>
+  <button id="saveBtn" onclick="saveQR()">Save QR</button>
+</div>
+
+<!-- Article -->
+<h3>How to Use the QR Code Generator</h3>
+<menu>
+<li>To get started, simply type any text, website link, or message into the input box above. This can be a web URL, your contact information, or even a short note you want to share easily. The tool instantly converts your input into a scannable QR code that works on any mobile or computer device.</li>
+
+<li>Once you’ve entered your text, click on the “Generate QR” button. Within seconds, your custom QR code will appear below. You can scan it right away using your phone’s camera or any QR scanner app to test how it works. The generator ensures high-quality QR codes that remain clear and readable on all screen sizes.</li>
+
+<li>Finally, to save your QR code for future use, click the “Save QR Code” button. The image will download automatically to your computer or mobile device, ready to be printed, shared, or embedded wherever you like. This makes it ideal for business cards, blog posts, social media, or digital marketing.</li>
+  </menu>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js" defer></script>
+</body>
+</html>

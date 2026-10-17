@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Birthday Countdown Generator</title>
+
+    <meta name="description" content="Create a personalized live countdown clock for your next birthday. Free online generator to track months, days, hours, and seconds until the party.">
+    <meta name="keywords" content="birthday countdown generator, birthday countdown clock, custom birthday timer, birthday tracker online, countdown to my birthday, personalized countdown widget, days until my birthday, live event timer">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .bday-wrapper {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #fff;
+        border: 2px solid maroon;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(128, 0, 0, 0.1);
+        font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .bday-header {
+        background: maroon;
+        color: #fff;
+        padding: 25px;
+        font-size: 22px;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .bday-container {
+        padding: 35px;
+        text-align: center;
+    }
+    .instr {
+        color: #666;
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
+    .input-row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    .maroon-select {
+        flex: 1;
+        padding: 15px;
+        border: 2px solid maroon;
+        border-radius: 12px;
+        font-size: 18px;
+        color: maroon;
+        background-color: #fff5f5;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .maroon-select:focus {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(128, 0, 0, 0.2);
+    }
+    .maroon-btn {
+        width: 100%;
+        background: maroon;
+        color: #fff;
+        border: none;
+        padding: 18px;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+    }
+    .maroon-btn:hover {
+        background: #600000;
+        transform: translateY(-2px);
+    }
+    .link-box {
+        margin-top: 25px;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        display: none;
+        word-break: break-all;
+        font-size: 14px;
+        border: 1px dashed maroon;
+    }
+    .link-box a {
+        color: maroon;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+      
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Birthday Countdown Generator</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+
+<div class="bday-wrapper">
+    <div class="bday-header">MY BIRTHDAY COUNTDOWN</div>
+    <div class="bday-container">
+        <p class="instr">Select your birth month and day:</p>
+        
+        <div class="input-row">
+            <select id="monthInput" class="maroon-select" onchange="updateDays()">
+                <option value="" disabled selected>Month</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+            </select>
+
+            <select id="dayInput" class="maroon-select">
+                <option value="" disabled selected>Day</option>
+            </select>
+        </div>
+        
+        <button onclick="generateBirthdayURL()" class="maroon-btn">Create & Open Link</button>
+        <div id="urlDisplay" class="link-box"></div>
+    </div>
+</div>
+<br>
+
+<br>
+        <script>
+    function updateDays() {
+        const month = document.getElementById('monthInput').value;
+        const daySelect = document.getElementById('dayInput');
+        daySelect.innerHTML = '<option value="" disabled selected>Day</option>';
+        
+        const currentYear = new Date().getFullYear();
+        
+        // Leap Year Logic
+        const isLeapYear = (year) => {
+            return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+        };
+
+        let days = 31;
+        if (month === 'february') {
+            days = isLeapYear(currentYear) ? 29 : 28;
+        } else if (['april', 'june', 'september', 'november'].includes(month)) {
+            days = 30;
+        }
+
+        for (let i = 1; i <= days; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            daySelect.appendChild(opt);
+        }
+    }
+
+    function generateBirthdayURL() {
+        const m = document.getElementById('monthInput').value;
+        const d = document.getElementById('dayInput').value;
+
+        if (!m || !d) {
+            alert("Please select both Month and Day!");
+            return;
+        }
+
+        const dateString = d + "-" + m;
+        
+        // Yahan se /p/ ko hata diya gaya hai taake Post sahi tarah khule
+        const finalUrl = "any-countdown.html?date=" + dateString;
+
+        const display = document.getElementById('urlDisplay');
+        display.style.display = "block";
+        display.innerHTML = '<strong>Generated Link:</strong><br><a href="' + finalUrl + '" target="_blank">' + finalUrl + '</a>';
+        
+        window.open(finalUrl, '_blank');
+    }
+</script>
+
+<article>
+  <h2>How to Create a Custom Birthday Countdown Link: The Ultimate Guide</h2>
+    
+    <p>In today’s digital world, celebrating birthdays has evolved from simple phone calls to creative online surprises. Whether it's for yourself, a best friend, or a family member, a <strong>Birthday Countdown</strong> adds an extra layer of excitement to the big day. But how do you create a personalized countdown link that you can share on social media or send via WhatsApp?</p>
+    
+    <p>Our Custom Birthday Countdown Generator is designed specifically for this purpose. In this article, we will explore why countdowns are so popular and how you can use our tool to create your own unique birthday link in seconds.</p>
+
+    <div class="highlight-box">
+        <h2>Why Use a Birthday Countdown?</h2>
+        <p>A countdown isn't just a timer; it’s a psychological builder of anticipation. Here’s why people love them:</p>
+        <ul>
+            <li><strong>Engagement:</strong> Sharing a live countdown on Instagram or Facebook stories keeps your friends engaged.</li>
+            <li><strong>Reminder:</strong> It acts as a digital reminder for those who might otherwise forget the date.</li>
+            <li><strong>Personalization:</strong> Unlike generic birthday wishes, a custom link shows that you’ve put effort into the celebration.</li>
+        </ul>
+    </div>
+
+    <h2>Features of Our Birthday Countdown Generator</h2>
+    <p>We have optimized our tool to be the most user-friendly generator available online. Here is what makes it stand out:</p>
+    <ul>
+        <li><strong>Smart Date Logic:</strong> Our tool is programmed with advanced JavaScript. If you select February, it automatically checks if the current year is a Leap Year (29 days) or a standard year (28 days). This prevents any technical errors.</li>
+        <li><strong>Mobile Friendly:</strong> The interface is clean and responsive, meaning it works perfectly on smartphones, tablets, and desktops.</li>
+        <li><strong>Maroon Premium Theme:</strong> We have used a professional Maroon color scheme to give the tool a modern, "premium" feel that looks great on any blog post.</li>
+        <li><strong>No Year Required:</strong> You don't need to enter the birth year—just the day and month—making it faster and more private.</li>
+    </ul>
+
+    <h2>How to Generate Your Personalized Link</h2>
+    <p>Using the generator is as easy as 1-2-3:</p>
+    
+    <span class="step-title">Step 1: Select the Month</span>
+    <p>First, choose the birth month from the dropdown menu. This is the primary step that sets the calendar logic for the next box.</p>
+
+    <span class="step-title">Step 2: Choose the Day</span>
+    <p>Once the month is selected, the "Day" box will update to show the correct number of days for that specific month (e.g., 30 days for June, 31 for August). Pick your date.</p>
+
+    <span class="step-title">Step 3: Create & Share</span>
+    <p>Click the "Create & Open Link" button. The tool will instantly generate a unique URL like <code>https://toolbook.gorababa.com/p/my-birthday-countdown.html?date=24-january</code>. You can click the link to see your countdown live or copy it to share with others.</p>
+
+    <hr>
+
+    <h2>Conclusion</h2>
+    <p>A birthday is a milestone that deserves a grand lead-up. By using our Birthday Countdown Generator, you turn a single day of celebration into weeks of excitement. Try it out now and start the clock for your next big day!</p>
+
+  </article>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

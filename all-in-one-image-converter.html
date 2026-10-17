@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | All-in-One Image Converter</title>
+
+    <meta name="description" content="Convert your images quickly and safely with our free all-in-one image converter. Easily change formats to WebP, PNG, JPG, and more right here.">
+    <meta name="keywords" content="all in one image converter, image format converter, free image converter, convert png to jpg, convert jpg to webp, online photo converter, bulk image converter, fast image encoder, webp converter online">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/image-converter.css" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/image-converter.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+      
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">All-in-One Image Converter</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+
+<div class="img-converter">
+  <h2>All-in-One Image Converter</h2>
+  <p>Select an image and choose the format you want to convert.</p>
+
+  <input accept="image/*" id="uploadImage" type="file" /><br />
+
+  <select id="formatSelect">
+    <option value="image/png">PNG</option>
+    <option value="image/jpeg">JPG</option>
+    <option value="image/webp">WEBP</option>
+    <!--Extra formats (require libraries for full support)-->
+    <option value="image/bmp">BMP</option>
+    <option value="image/tiff">TIFF</option>
+    <option value="image/x-icon">ICO</option>
+    <option value="image/avif">AVIF</option>
+    <option value="image/heif">HEIF</option>
+  </select><br />
+
+  <button onclick="convertImage()">Convert</button>
+
+  <canvas id="canvas"></canvas>
+</div>
+
+<!--Article-->
+<article>
+      <p>Among the many tools available on the internet, an <strong>All-in-One Image Converter</strong> is a useful tool that allows users to convert images to different formats. This online tool is not only fast but also completely free to use. Its biggest feature is that it supports several types of image formats in one place, such as <strong>JPG, PNG, GIF, BMP,</strong> and <strong>WEBP</strong>.</p>
+
+      <h2>Easy to use and fast</h2>
+        <p>The interface of this tool is very simple and user-friendly. All you have to do is upload your desired image, then select the format you want to convert it to, and finally click on the <code>Convert</code> button. This tool converts your image to the desired format in a very short time. This feature is very useful for those who need to quickly prepare images for a website, social media, or any other platform.</p>
+
+        <h2>Free and accessible</h2>
+        <p>The fact that this tool is free is another great advantage of it. It allows users to convert their images without any subscription or hidden charges. In addition, it can be used on any device, be it a computer, tablet, or smartphone, without installing any software. This means that you can convert your images anytime and anywhere.</p>
+      
+        <h2>Additional Features</h2>
+        <p>Many all-in-one image converters are not limited to just converting formats. They often also offer additional features, such as <strong>reducing the image size</strong>, <strong>compressing</strong> it, or <strong>editing</strong> it. All of this is available on a single platform, which helps save time. Such a tool is equally useful for graphic designers, bloggers, and ordinary users. It is a convenience that greatly simplifies online work without any cost.</p>
+
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

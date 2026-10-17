@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Death Calculator - Death Estimator</title>
+
+    <meta name="description" content="Estimate your life expectancy instantly with our free online death calculator. Analyze health, lifestyle, and longevity habits for fun insights.">
+    <meta name="keywords" content="death calculator, death estimator, life expectancy calculator, longevity calculator, prediction timer, health lifespan estimator, life length predictor, mortality calculator, fun countdown tool">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/death-estimator.css" rel="stylesheet">
+    <script defer="" src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/death-estimator.js"></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+      
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Death Calculator <br> Death Estimator</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+
+<div id="death-time-estimator">
+  <h3>Life Expectancy Estimator</h3>
+
+  <label>Date of Birth</label>
+  <div class="dob-row">
+    <select aria-label="Month" id="month"></select>
+    <select aria-label="Day" id="day"></select>
+    <select aria-label="Year" id="year"></select>
+  </div>
+
+  <label>Gender</label>
+  <select id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other / Prefer not to say</option>
+  </select>
+
+  <label>Weight (kg)</label>
+  <input id="weight" max="500" type="number" />
+
+  <label>Height (cm)</label>
+  <input id="height" max="250" type="number" />
+
+  <label>Smoking</label>
+  <select id="smoke">
+    <option value="no">No</option>
+    <option value="yes">Yes</option>
+  </select>
+
+  <label>Alcohol</label>
+  <select id="alcohol">
+    <option value="no">No</option>
+    <option value="yes">Yes</option>
+  </select>
+
+  <label>Country</label>
+  <select id="country"></select>
+
+  <button id="estimateBtn">Estimate Death Time</button>
+
+  <div aria-live="polite" class="result" id="result"></div>
+  <div class="muted">This tool is for fun and entertainment only. Not a medical or scientific prediction.</div>
+</div>
+<article>
+  <h2>Death Time Estimator Tool - Know Your Life Expectancy in Seconds</h2>
+
+  <p>Have you ever wondered how long you might live? While no one can predict the future with certainty, our <b>Death Time Estimator Tool</b> gives you a fun, data-based estimate of your possible lifespan.</p>
+
+  <p>This interactive tool uses basic personal details like <b>date of birth, gender, height, weight, lifestyle habits</b>, and even your <b>country</b> to give you an estimated time of death instantly. It’s not meant to be taken as a medical prediction, but rather a lighthearted way to think about health and lifestyle choices.</p>
+
+  <h3>How It Works</h3>
+  <p>The tool calculates your life expectancy based on general health and demographic data. Here’s what you need to do:</p>
+
+  <menu>
+    <li><b>Select your Date of Birth</b>: Choose your month, day, and year.</li>
+    <li><b>Enter your Height and Weight</b>: To understand your body profile.</li>
+    <li><b>Select Gender</b>: Because average lifespan varies between men and women.</li>
+    <li><b>Choose whether you Smoke or Drink Alcohol</b>: Lifestyle has a major effect on longevity.</li>
+    <li><b>Select your Country</b>: Health conditions and life expectancy differ across regions.</li>
+    <li><b>Click “Calculate Death Time”</b>: See the estimated year, month, and day of your death appear instantly.</li>
+  </menu>
+
+  <h3>Why Use It</h3>
+  <p>This tool is a simple reminder that our daily habits directly affect our health and lifespan. While it’s just for entertainment, it can motivate you to eat healthier, quit smoking, or take better care of yourself.</p>
+
+  <h3>Disclaimer</h3>
+  <p>This calculator is <b>not a medical tool</b>. It uses general assumptions and public health data to give a fun, approximate result. For real health advice, always consult a doctor.</p>
+
+  <h3>Try It Now</h3>
+  <p>Scroll up and use the <b>Death Time Estimator Tool</b> top. Enter your details, click the button, and see what the numbers say about your life expectancy. It might just inspire you to make a few changes for a longer, healthier life.</p>
+</article>
+
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

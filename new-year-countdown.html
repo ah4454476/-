@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Online New Year Countdown</title>
+
+    <meta name="description" content="Track the exact time left until midnight with our free online New Year countdown clock. Celebrate the big holiday and watch the seconds tick down.">
+    <meta name="keywords" content="new year countdown, new year countdown clock, online countdown timer, time until new year, seconds until midnight, new year timer free, live countdown clock, countdown to new year">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/countdown.css">
+    <script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/countdown.js"></script>
+
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Online New Year Countdown</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+<!-- 🎉 Today's Event Countdown -->
+<section id="todayEventCountdown" class="timer-box">
+  <h2>New Year Countdown!</h2>
+  <!-- 🔽 You can change this date -->
+  <div id="countDate" data-date="January 1"></div>
+
+  <div class="cdTmr">
+    <div class="cDown">
+      <span class="cdBox"><b class="days">00</b><small>Days</small></span>
+      <span class="cdBox"><b class="hours">00</b><small>Hours</small></span>
+      <span class="cdBox"><b class="minutes">00</b><small>Mins</small></span>
+      <span class="cdBox"><b class="seconds">00</b><small>Secs</small></span>
+    </div>
+  </div>
+   <!-- ✅ Greeting now included in HTML -->
+  <p class="msg">There are only days left</p>
+  <p class="greeting" style="display:none;">Happy New Year!</p>
+</section>
+
+<article> 
+  <h3>New Year's Excitement: Celebrate with the New Year's Countdown!</h3>
+  <p>Although it may seem far away, there is a certain magic to the arrival of the New Year. It's an opportunity to forget old things, make new goals, and celebrate new beginnings. And what better way to extend that wait than to celebrate with a countdown to the New Year?</p>
+  
+  <h3>Countdown Tradition</h3>
+  <p>The New Year countdown is a global tradition. From the iconic ball drop in New York City's Times Square to fireworks displays around the world, counting down together creates unity and excitement as we all usher in the New Year together.</p>
+  
+  <h3>Latest Countdown</h3>
+  <p>Today, you don't have to travel to a bustling city to experience the New Year countdown. There are several ways you can try incorporating this tradition into your New Year's Eve celebrations:</p>
+  <menu>
+    <li><strong>Digital Countdown:</strong> Many websites offer online New Year's countdown clocks, allowing you to track the seconds counting down, regardless of your location.</li>
+    <li><strong>Countdown Apps:</strong> Download a Countdown app on your phone or tablet. These often come with celebratory animations and sounds, providing a fun and interactive experience.</li>
+    <li><strong>DIY Countdown:</strong> Get creative! Create a countdown with balloons, candles, or any fun idea to mark each moment.</li>
+  </menu>
+  
+  <h3>More Than a Clock</h3>
+  <p>The New Year's countdown isn't just a way to mark the passing of time. Here is the opportunity:</p>
+  <menu>
+    <li><strong>Reflecting on the Past Year:</strong> Take some time to appreciate the accomplishments and experiences of the past year.</li>
+    <li><strong>Making New Year's Intentions:</strong> When the clock strikes twelve, focus on your hopes and aspirations for the new year.</li>
+    <li><strong>Celebrate with Loved Ones:</strong> Share the excitement with friends and family, and create memorable moments.</li>
+  </menu>
+  
+  <p>So, as we come to the end of another year, consider adding a New Year's countdown to your celebration. It's a simple yet powerful way to embrace the spirit of new beginnings and kick off the new year with joy.</p>
+</article>
+
+    </main>
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

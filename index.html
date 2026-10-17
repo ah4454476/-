@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERKS - Creative Solutions & Engineering</title>
+    <meta name="description" content="MODERKS provides professional creative and technical solutions including solar power systems, software development, networking, electronic projects, smart home integration, WordPress, e-commerce, security systems, and online earning partnerships.">
+    <meta name="keywords" content="MODERKS, Creative Solutions, Systems, Softwares, Networking, Electronic Projects, Solar Power Systems, Smart Home Integration, WordPress Development, Google Adsense, Amazon Associates, ClickBank, Online Earning">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090d16',
+                        cardBg: '#121826',
+                        accent: '#800000',
+                        accentGlow: '#a31515',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --font-scale: clamp(0.8rem, 0.75rem + 0.4vw, 1.05rem); }
+        body { font-size: var(--font-scale); background-color: #090d16; color: #f3f4f6; overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #090d16; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+        .glass-panel { background: rgba(18, 24, 38, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        
+        .project-preview { height: 170px; background: #0b1220; }
+        .project-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
+        .marquee-track { display: inline-flex; gap: 1.5rem; animation: ticker 35s linear infinite; }
+        .marquee-container:hover .marquee-track { animation-play-state: paused; }
+
+        /* Projects Marquee Animation */
+        .projects-marquee { overflow: hidden; position: relative; width: 100%; }
+        .projects-track { display: flex; gap: 1.5rem; width: max-content; animation: ticker 25s linear infinite; }
+        .projects-marquee:hover .projects-track { animation-play-state: paused; }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 font-sans antialiased selection:bg-[#800000] selection:text-white">
+
+<header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-gray-800/60 transition-all duration-300" id="navbar">
+    <div class="max-w-[1500px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-2.5 group">
+            <div class="w-9 h-9 rounded-lg bg-[#800000]/10 border border-[#800000]/30 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+                <img src="favicon.png" alt="MODERKS Logo" class="w-full h-full object-contain">
+            </div>
+            <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-gradient-to-r from-white via-gray-200 to-[#a31515] bg-clip-text text-transparent">MODERKS</span>
+        </a>
+
+        <!-- Optimized Unified Navigation -->
+        <nav class="hidden md:flex items-center gap-6 font-medium text-sm text-gray-300 nav-links">
+            <a href="#hero" class="hover:text-[#a31515] transition-colors">Home</a>
+            <a href="#about" class="hover:text-[#a31515] transition-colors">About</a>
+            <a href="#services" class="hover:text-[#a31515] transition-colors">Services</a>
+            <a href="#partners" class="hover:text-[#a31515] transition-colors">Partners</a>                
+            <a href="#projects" class="hover:text-[#a31515] transition-colors">Projects</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+            <a href="#contacts" class="px-4 py-2 rounded-lg bg-[#800000] hover:bg-[#a31515] text-white font-semibold text-xs transition-all shadow-md">Contacts</a>
+        </div>
+
+        <button id="menu-btn" type="button" aria-label="Toggle navigation menu" class="md:hidden text-gray-300 hover:text-white focus:outline-none p-2 rounded-lg bg-gray-800/50">
+            <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+    </div>
+
+    <!-- Dropdown Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gray-800 px-5 py-4 space-y-3 shadow-xl">
+        <div class="flex flex-col space-y-3 font-medium text-base text-gray-200 mobile-links-container">
+            <a href="#hero" class="hover:text-[#a31515] transition-colors mobile-link">Home</a>
+            <a href="#about" class="hover:text-[#a31515] transition-colors mobile-link">About</a>
+            <a href="#services" class="hover:text-[#a31515] transition-colors mobile-link">Services</a>
+            <a href="#partners" class="hover:text-[#a31515] transition-colors mobile-link">Partners</a>
+            <a href="#projects" class="hover:text-[#a31515] transition-colors mobile-link">Projects</a>
+        </div>
+        <div class="pt-2">
+            <a href="#contacts" class="block w-full py-2.5 text-center rounded-lg bg-[#800000] text-white font-semibold text-sm mobile-link">Contacts</a>
+        </div>
+    </div>
+</header>
+   
+<main class="w-full">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 sm:px-6 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#800000]/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-[1300px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3d0000]/80 border border-[#800000]/30 text-[#ffb3b3] text-xs font-medium">
+                    <span class="w-2 h-2 rounded-full bg-[#ff4d4d] animate-pulse"></span>
+                    Creative Solutions & Engineering
+                </div>
+                <h1 class="text-3xl sm:text-5xl xl:text-6xl font-black tracking-tight leading-[1.1]">
+                    Welcome to <span class="bg-gradient-to-r from-[#ff4d4d] via-[#a31515] to-pink-400 bg-clip-text text-transparent">MODERKS</span>
+                </h1>
+                <p class="text-gray-400 text-sm sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    Empowering enterprises with custom Systems, Softwares, Networking, Electronic Projects, WordPress solutions, Smart Home automation, and Solar integration. Led by <b>MODERKS</b>[cite: 1].
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+                    <a href="#services" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#800000] hover:bg-[#a31515] text-white font-bold text-sm shadow-lg transition-all text-center">
+                        Explore Services <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                    <a href="#contacts" class="w-full sm:w-auto px-6 py-3 rounded-xl glass-panel hover:bg-gray-800/80 text-gray-200 font-bold text-sm transition-all text-center border border-gray-700">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-sm">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[#800000] to-[#a31515] rounded-2xl blur-lg opacity-30"></div>
+                    <div class="relative glass-panel rounded-2xl p-5 space-y-4 shadow-xl border border-gray-700/60">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="text-[11px] font-mono text-gray-400">moderks_v1.0.sh</span>
+                        </div>
+                        <div class="space-y-2 font-mono text-xs text-[#ffb3b3] bg-gray-950/60 p-3 rounded-lg border border-gray-800">
+                            <p class="text-gray-500">// Loading capabilities...</p>
+                            <p><span class="text-pink-400">const</span> founder = <span class="text-yellow-300">'MODERKS'</span>;</p>
+                            <p class="text-emerald-400">✓ Solutions ready.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 px-4 sm:px-6 relative">
+        <div class="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="space-y-4">
+                <p class="text-xs font-semibold tracking-widest uppercase text-[#ff4d4d]">About MODERKS</p>
+                <h2 class="text-2xl sm:text-4xl font-black tracking-tight">Technology that turns ideas into practical solutions.</h2>
+                <p class="text-gray-300 text-sm leading-relaxed">MODERKS brings technical services together to help individuals and businesses plan, build, improve, and maintain digital and physical systems with responsive support[cite: 1].</p>
+                <a href="#contacts" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#800000] hover:bg-[#a31515] text-white font-bold text-xs transition-colors">Discuss a Project <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="glass-panel rounded-xl p-5">
+                    <i class="fa-solid fa-bullseye text-xl text-[#ff4d4d] mb-3"></i>
+                    <h3 class="font-bold text-base mb-1">Purpose-built</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Solutions shaped around your goals and available resources.</p>
+                </div>
+                <div class="glass-panel rounded-xl p-5">
+                    <i class="fa-solid fa-screwdriver-wrench text-xl text-[#ff4d4d] mb-3"></i>
+                    <h3 class="font-bold text-base mb-1">Practical Support</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Help with setup, troubleshooting, and maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Services Section -->
+    <section id="services" class="py-16 px-4 sm:px-6 relative bg-gray-950/40">
+        <div class="max-w-[1300px] mx-auto space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-xs font-semibold tracking-widest uppercase text-[#ff4d4d]">Our Expertise</h2>
+                <h3 class="text-2xl sm:text-4xl font-black tracking-tight">Comprehensive Technical & Creative Solutions</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Interior and Exterior Designing -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-orange-600/10 border border-orange-500/20 flex items-center justify-center text-orange-400 text-xl group-hover:bg-orange-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-couch"></i></div>
+                    <h4 class="text-lg font-bold text-white">Interior & Exterior Designing</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Professional aesthetic layouts, architectural styling, and modern space decoration.</p>
+                </div>
+                <!-- Floor Planing -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-xl group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h4 class="text-lg font-bold text-white">Floor Planing</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Detailed architectural blueprints, structural layouts, and optimized space planning.</p>
+                </div>
+                <!-- Fast-Food Consultancy -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-600/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-xl group-hover:bg-rose-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-burger"></i></div>
+                    <h4 class="text-lg font-bold text-white">Fast-Food Consultancy</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Complete restaurant setup guidance, menu optimization, and operational strategy.</p>
+                </div>
+                <!-- CATV and All Types of Networking -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-600/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-network-wired"></i></div>
+                    <h4 class="text-lg font-bold text-white">CATV & All Types of Networking</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Cable television distribution, local area networks, and enterprise connectivity solutions.</p>
+                </div>
+                <!-- Existing Services -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-[#800000]/10 border border-[#800000]/20 flex items-center justify-center text-[#ff4d4d] text-xl group-hover:bg-[#800000] group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-solar-panel"></i></div>
+                    <h4 class="text-lg font-bold text-white">Solar Power Systems</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Sustainable solar panel setups and green energy configurations.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-[#a31515]/10 border border-[#a31515]/20 flex items-center justify-center text-[#a31515] text-xl group-hover:bg-[#a31515] group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-server"></i></div>
+                    <h4 class="text-lg font-bold text-white">Systems & Softwares</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Robust IT infrastructure, enterprise software solutions, and networking.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-teal-600/10 border border-teal-500/20 flex items-center justify-center text-teal-400 text-xl group-hover:bg-teal-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h4 class="text-lg font-bold text-white">Smart Home Integration</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Automated residential control systems and smart living environment setups.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl group-hover:bg-blue-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <h4 class="text-lg font-bold text-white">E-Commerce Solutions</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">High-performance online stores and digital retail shopping platforms.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-microchip"></i></div>
+                    <h4 class="text-lg font-bold text-white">Electronic Projects</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Custom hardware prototyping, circuit design, and project development.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-sky-600/10 border border-sky-500/20 flex items-center justify-center text-sky-400 text-xl group-hover:bg-sky-600 group-hover:text-white transition-all shadow-md"><i class="fa-brands fa-wordpress"></i></div>
+                    <h4 class="text-lg font-bold text-white">WordPress Development</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Professional custom themes, plugins, and dynamic website building.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-green-600/10 border border-green-500/20 flex items-center justify-center text-green-400 text-xl group-hover:bg-green-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-video"></i></div>
+                    <h4 class="text-lg font-bold text-white">Security & Surveillance</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Advanced CCTV installation, monitoring units, and premises protection.</p>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl space-y-3 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-600/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl group-hover:bg-amber-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-volume-high"></i></div>
+                    <h4 class="text-lg font-bold text-white">Audio & Acoustics</h4>
+                    <p class="text-gray-400 text-xs leading-relaxed">Sound engineering, acoustic setups, and professional audio integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="py-16 px-4 sm:px-6 relative">
+        <div class="max-w-[1300px] mx-auto space-y-10">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <p class="text-xs font-semibold tracking-widest uppercase text-[#ff4d4d]">Monetization & Ecosystem</p>
+                <h2 class="text-2xl sm:text-4xl font-black tracking-tight">Trusted Partners & Online Earning Networks</h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="glass-panel p-5 rounded-2xl text-center space-y-2 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-xl group-hover:bg-blue-600 group-hover:text-white transition-all shadow-md"><i class="fa-brands fa-google"></i></div>
+                    <h4 class="text-sm font-bold text-white">Google AdSense</h4>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl text-center space-y-2 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl group-hover:bg-amber-600 group-hover:text-white transition-all shadow-md"><i class="fa-brands fa-amazon"></i></div>
+                    <h4 class="text-sm font-bold text-white">Amazon Associates</h4>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl text-center space-y-2 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-sack-dollar"></i></div>
+                    <h4 class="text-sm font-bold text-white">ClickBank</h4>
+                </div>
+                <div class="glass-panel p-5 rounded-2xl text-center space-y-2 hover:border-[#800000]/50 transition-all group">
+                    <div class="w-12 h-12 mx-auto rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 text-xl group-hover:bg-purple-600 group-hover:text-white transition-all shadow-md"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4 class="text-sm font-bold text-white">Global Ad Networks</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Right to Left Marquee Auto-Scroll -->
+    <section id="projects" class="py-16 px-4 sm:px-6 relative bg-gray-950/40 overflow-hidden">
+        <div class="max-w-[1300px] mx-auto space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <p class="text-xs font-semibold tracking-widest uppercase text-[#ff4d4d]">Portfolio & Live Projects</p>
+                <h2 class="text-2xl sm:text-4xl font-black tracking-tight">Projects That Speak for Themselves</h2>
+                <p id="project-count" class="text-xs text-gray-500"></p>
+            </div>
+
+            <!-- Marquee Container -->
+            <div class="projects-marquee py-2">
+                <div id="projects-track" class="projects-track"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="relative bg-gray-950/60 py-16 px-4 sm:px-6">
+        <div class="max-w-[1300px] mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <h2 class="text-xs font-semibold tracking-widest uppercase text-[#ff4d4d]">Get In Touch</h2>
+                <h3 class="text-2xl sm:text-4xl font-black tracking-tight text-white">Let's Discuss Your Project</h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+                <div class="glass-panel p-6 sm:p-8 rounded-2xl border border-gray-800 flex flex-col justify-center space-y-5">
+                    <h4 class="text-lg font-bold text-white text-center">Feel Free to Contact Us</h4>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#a31515]/10 border border-[#a31515]/20 flex items-center justify-center text-[#a31515] text-sm shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="min-w-0 flex-1 pt-0.5">
+                            <p class="text-xs text-gray-400">Email Address</p>
+                            <a href="mailto:ah4454476@gmail.com" class="text-xs sm:text-sm font-semibold text-white hover:text-[#a31515] break-all">ah4454476@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-pink-600/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-sm shrink-0"><i class="fa-solid fa-phone"></i></div>
+                        <div class="min-w-0 flex-1 pt-0.5">
+                            <p class="text-xs text-gray-400">Direct Line</p>
+                            <a href="tel:+923394454476" class="text-xs sm:text-sm font-semibold text-white hover:text-pink-400">+92-339-4454476</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-400 text-sm shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="min-w-0 flex-1 pt-0.5">
+                            <p class="text-xs text-gray-400">Address Location</p>
+                            <p class="text-xs sm:text-sm font-semibold text-white">Lahore, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-2 rounded-2xl border border-gray-800 overflow-hidden min-h-[300px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217759.99380903825!2d74.20736021575825!3d31.54971775796347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1710000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; min-height:280px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External Links Marquee Ticker -->
+    <div class="py-4 bg-gray-950 border-t border-gray-800/80 marquee-container">
+        <div id="marquee-track" class="marquee-track"></div>
+    </div>
+</main>
+
+<footer class="border-t border-gray-800/80 py-8 px-4 sm:px-6 bg-gray-950">
+    <div class="max-w-[1300px] mx-auto space-y-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-[#800000]/10 border border-[#800000]/30 flex items-center justify-center p-1.5 shadow-md"><img src="favicon.png" alt="Logo" class="w-full h-full object-contain"></div>
+                <span class="font-extrabold text-base text-white tracking-tight">MODERKS</span>
+            </div>
+            <p class="text-xs text-gray-500">© <span id="current-year"></span> MODERKS Creative Solutions. All rights reserved.</p>
+        </div>
+        <!-- 8 Legal Pages Links -->
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-4 border-t border-gray-800/60 text-xs">
+            <a href="/privacy-policy.html" class="text-gray-400 hover:text-[#ff4d4d] transition-colors">Privacy Policy</a>
+            <span class="text-gray-700">•</span>
+            <a href="/terms-and-conditions.html" class="text-gray-400 hover:text-[#ff4d4d] transition-colors">Terms & Conditions</a>
+            <span class="text-gray-700">•</span>
+            <a href="/disclaimer.html" class="text-gray-400 hover:text-[#ff4d4d] transition-colors">Disclaimer</a>
+            <span class="text-gray-700">•</span>
+            <a href="/about-us.html" class="text-gray-400 hover:text-[#ff4d4d] transition-colors">About Us</a>
+            <span class="text-gray-700">•</span>
+            <a href="/contact-us.html" class="text-gray-400 hover:text-[#ff4d4d] transition-colors">Contact Us</a>
+            <span class="text-gray-700">•</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle & Auto Close
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 20) {
+            navbar.classList.add('shadow-lg', 'bg-darkBg/90');
+        } else {
+            navbar.classList.remove('shadow-lg', 'bg-darkBg/90');
+        }
+    });
+
+    // External Links List
+    const EXTERNAL_LINKS = [
+{ title: "Age Calculator", url: "/age-calculator.html" },
+{ title: "image Convertor", url: "/all-in-one-image-converter.html" },
+{ title: "US Day", url: "/america-independence-day.html" },
+{ title: "Birthday Countdown Genrator", url: "/birthday-countdown-generator.html" },
+{ title: "Sitemap Genrator", url: "/blogger-xml-sitemap-generate.html" },
+{ title: "Canada Day", url: "/canada-independence-day.html" },
+{ title: "Death Clock", url: "/death-clock.html" },
+{ title: "India Day", url: "/india-independence-day.html" },
+{ title: "Mortgage Calculator", url: "/mortgage-calculator.html" },
+{ title: "Baby-Boys-Name", url: "/new-born-boy-name-generator.html" },
+{ title: "Baby-Girls-Name", url: "/new-born-girl-name-generator.html" },
+{ title: "Happy New Year", url: "/new-year-countdown.html" },
+{ title: "Online Notepad", url: "/online-notepad-editor.html" },
+{ title: "Text Case Convertor", url: "/online-text-case-converter-free.html" },
+{ title: "Pakistan Day", url: "/pakistan-independence-day.html" },
+{ title: "Password Genrator", url: "/password-generator.html" },
+{ title: "QR Code Genrator", url: "/qr-code-generator.html" },
+{ title: "What is My IP", url: "/what-is-my-ip.html" }
+    ];
+
+    function renderMarqueeLinks() {
+        const track = document.getElementById("marquee-track");
+        track.innerHTML = "";
+        const items = [...EXTERNAL_LINKS, ...EXTERNAL_LINKS];
+        items.forEach(item => {
+            const a = document.createElement("a");
+            a.href = item.url;
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+            a.className = "px-4 py-1.5 rounded-lg glass-panel text-xs font-medium text-gray-300 hover:text-[#ff4d4d] hover:border-[#800000] transition-colors inline-flex items-center gap-2 shrink-0";
+            a.innerHTML = `<i class="fa-solid fa-link text-[10px] text-[#ff4d4d]"></i> ${item.title}`;
+            track.appendChild(a);
+        });
+    }
+    renderMarqueeLinks();
+
+    // Projects Data
+    const MODERKS_PROJECTS = [
+        { 
+            image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80", 
+            title: "Help Parkinsons", 
+            description: "Your donations make us easy." 
+        },
+        { 
+            image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80", 
+            title: "Prop US Money", 
+            description: "Not real but good for showbiz." 
+        },
+        { 
+            image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80", 
+            title: "Image Convertor", 
+            description: "All in one image convertor." 
+        },
+        { 
+            image: "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?auto=format&fit=crop&w=600&q=80", 
+            title: "America Day Countdown", 
+            description: "The Story Behind US Independence." 
+        },
+        { 
+            image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80", 
+            title: "Recipe Book", 
+            description: "Homemade US recipes." 
+        }
+    ];
+
+    function renderProjects() {
+        const projectsTrack = document.getElementById("projects-track");
+        projectsTrack.innerHTML = "";
+        const items = [...MODERKS_PROJECTS, ...MODERKS_PROJECTS];
+        items.forEach((project, index) => {
+            const card = document.createElement("article");
+            card.className = "project-card glass-panel rounded-2xl overflow-hidden border border-gray-800 flex flex-col hover:border-[#800000]/60 transition-colors group shrink-0";
+            card.style.width = "300px";
+            
+            card.innerHTML = `
+                <div class="project-preview overflow-hidden relative">
+                    <img src="${project.image}" alt="${project.title}" loading="lazy">
+                    <span class="absolute top-2 right-2 px-2.5 py-0.5 rounded-full bg-[#3d0000]/95 text-[#ffb3b3] text-[10px] font-semibold border border-[#800000]">#${(index % MODERKS_PROJECTS.length) + 1}</span>
+                </div>
+                <div class="p-4 flex-1 space-y-2">
+                    <h3 class="text-base font-bold text-white group-hover:text-[#ff4d4d] truncate">${project.title}</h3>
+                    <p class="text-xs text-gray-400 line-clamp-2">${project.description}</p>
+                </div>`;
+            projectsTrack.appendChild(card);
+        });
+        document.getElementById("project-count").textContent = MODERKS_PROJECTS.length + " projects";
+    }
+    renderProjects();
+</script>
+</body>
+</html>

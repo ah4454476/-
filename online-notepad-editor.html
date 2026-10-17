@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Online Notepad – Free Simple Notes Editor</title>
+
+    <meta name="description" content="Write, edit, and save text online with our free simple online notepad. A clean, distraction-free browser editor for taking quick notes instantly.">
+    <meta name="keywords" content="online notepad, free text editor, simple web notepad, browser notes app, online text pad, scratchpad online, distraction free editor, digital notepad web, save notes online">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/notepad.css">
+<script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/notepad.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+      
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Online Notepad <br> Free Simple Notes Editor</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+
+<div class="post-editor" id="postEditor">
+  <h2>📝 Simple Text Editor</h2>
+
+  <div id="toolbar">
+    <button onclick="saveFile()">💾 Save (.txt)</button>
+    <label for="fileInput">📂 Open</label>
+    <input id="fileInput" type="file" />
+    <button onclick="clearEditor()">🧹 Clear</button>
+    <button onclick="copyText()">📋 Copy</button>
+    <button onclick="pasteText()">📥 Paste</button>
+    <button onclick="toggleDarkMode()">🌙 Mode</button>
+  </div>
+
+  <textarea id="editor" placeholder="Start typing here..."></textarea>
+  <div id="wordCount">Words: 0 | Characters: 0</div>
+</div>
+
+<article>
+
+  <h2>The Quiet Power of Simplicity: Why Notepad Endures</h2>
+
+  <p>In a world full of flashy, feature-rich apps, there's a quiet little program that's been a steady companion on our Windows desktops for decades: <strong>Notepad</strong>. It's easy to overlook, often relegated to a quick note or an emergency text file opening, but this humble editor has a surprising legacy and an enduring charm that's hard to ignore.</p>
+
+  <h2>The Origins of a Digital Companion</h2>
+  <p>Notepad's story begins back in 1983, when personal computers were a brand new concept. Microsoft developer Richard Brody created it as a simple tool for creating and editing text files in MS-DOS. Its main job at the time was to show off the functionality of the brand-new computer mouse.</p>
+
+  <p>Despite its barebones design, Notepad became a quick favorite because it was so simple to use. You could jot down notes, draft basic documents, or even write simple scripts without getting bogged down by the complicated features of dedicated word processors. As Windows grew and evolved, so did Notepad, becoming a permanent and reliable fixture on every version of the operating system.</p>
+
+  <h2>The Allure of Simplicity</h2>
+  <p>In a world obsessed with bells and whistles, Notepad's lasting appeal is its lack of them. Unlike modern word processors that can feel cluttered with endless formatting options, Notepad is a blank slate. It’s a digital notepad where you can let your ideas flow freely without worrying about fonts, margins, or layouts.</p>
+
+  <p>This simplicity makes it perfect for a variety of tasks where anything more would be overkill:</p>
+
+  <menu>
+    <li><strong>Quick Notes &amp; Brainstorming:</strong> Need to jot down a quick thought or capture an idea? Notepad is there instantly, ready for you to get it all down without any distractions.</li>
+    <li><strong>Basic Text Editing:</strong> Whether you're tweaking a configuration file or creating a simple script, Notepad handles it with ease. Its lightweight nature makes it the ideal tool for when a full word processor is just too much.</li>
+    <li><strong>Code Snippets:</strong> Many programmers use Notepad to quickly write or test short code snippets. Its plain text format ensures everything works seamlessly across different programming languages.</li>
+    <li><strong>Lightweight Viewer:</strong> Ever need to open a text file quickly without any extra formatting? Notepad is a super-fast way to see the raw content of a file without any embellishments.</li>
+  </menu>
+
+  <h2>Beyond the Basics: Notepad's Hidden Gems</h2>
+  <p>While it seems basic, Notepad does have a few tricks up its sleeve:</p>
+
+  <menu>
+    <li><strong>Search and Replace:</strong> This is a lifesaver for quickly finding and replacing text, whether you’re correcting a typo or making a frequent change across a document.</li>
+    <li><strong>Text Wrapping:</strong> For a more readable experience, especially with long passages, you can enable line wrapping so the text continues on the next line instead of running off the screen.</li>
+    <li><strong>Unicode Support:</strong> Modern versions of Notepad support Unicode, allowing you to work with different languages and special characters.</li>
+  </menu>
+
+  <h2>The Future of a Timeless Tool</h2>
+  <p>Notepad's continued presence in a world of ever-evolving software speaks volumes about its value. While more sophisticated apps offer advanced features, Notepad remains a reliable workhorse for the tasks it was designed for.</p>
+
+  <p>Moving forward, it's likely that Notepad will continue to be a core utility within Windows. Microsoft may add minor improvements, but its simple, lightweight core is unlikely to change.</p>
+
+  <p><strong>Notepad</strong> is a quiet reminder that sometimes, the most effective tools are the simplest ones. As long as we need to jot down a quick note, edit a text file, or just have a blank canvas for our thoughts, Notepad will hold its place on our desktops a silent, ever-present companion on our digital journey.</p>
+  </article>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>

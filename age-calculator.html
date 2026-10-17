@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Toools and Events | Free Age Calculator</title>
+
+    <meta name="description" content="Calculate your exact age in years, months, and days with our free online age calculator. Quickly find how old you are from your date of birth.">
+    <meta name="keywords" content="free age calculator, online age calculator, age calculator by date of birth, calculate my age, how old am i, birth date calculator, age finder tool, age tracker online, exact age counter">
+    <meta name="theme-color" content="#111827">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.png">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Tool JS CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/age-calculator.css">
+<script defer src="https://cdn.jsdelivr.net/gh/ah4454476/kit@main/age-calculator.js"></script>
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-navbar">
+            <div class="container-fluid px-3 px-lg-4 px-xl-5">
+                <!-- Website Brand -->
+                <a class="brand" href="#" aria-label="My Website home">
+                    <span class="brand-icon" aria-hidden="true">T</span>
+                    <span class="brand-icon" aria-hidden="true">&</span>
+                    <span class="brand-icon" aria-hidden="true">E</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+<!-- ================= Post Title ================= -->
+    <h1 style="text-align: center; color: #800000;">Free Age Calculator</h1>
+
+    <!-- ================= ADS BANNER (HEADER KE NICHE) ================= -->
+    <div id="ads-banner-container"></div>
+
+    <!-- ================= BLANK CONTENT ================= -->
+    <main class="main-content" id="main-content">
+<h2 align="center">How old am I?</h2>
+
+<div class="post-age-calculator">
+  <form id="ageForm">
+    <div class="container">
+      <select id="daySelect"></select>
+      <select id="monthSelect"></select>
+      <select id="yearSelect"></select>
+    </div>
+    <button type="submit"><b>Calculate</b></button>
+  </form>
+
+  <div class="result">
+    <span id="ageSpan">Your age will be shown here</span>
+  </div>
+</div>
+
+<div>
+      <h2 align="center">Online Age Calculator</h2>
+         <div align="left">
+          <p>A person's age can be calculated in many different ways. This calculator is based on the maximum age. In this system, the age of a person increases according to his birthday. For example, a person who lives 3 years and 11 months is 3 years old and will be 4 years old on his birthday a month later. This age is used in most Western countries.</p>
+            <p>In some cultures, age is expressed by counting years, including or excluding the current year. For example, a twenty-year-old person is the same age as another twenty-one-year-old person. In one of the traditional age counting systems, people are born in a year and their ages are counted in lunar years instead of their birthdays. For example, if a baby is born the day before Chinese New Year, 2 days later, the baby will be 2 years old, even if it is only 2 days old.</p>
+            <p>In a few cases, the Moon Age results can be confusing, especially when the start date is at the end of the month. For example, we count the months from February 20 to March. 20 is a month. However, there are two ways to calculate age from 28 February 2022 to 31 March 2022. March 28 to March 28 is one month, then the result is 1 month and 3 days. If we consider both February 28 and March 31 as month ends, the result is one month. Both calculations are required. Similar events are held from April 30 to May 31, May 30 to June 30, and other days. The confusion arises from the fact that days are not equal to months. We use the old method in our calculations.</p>
+            <p>In some regions, people calculate their age from the date of conception rather than their date of birth. This method is often used in certain cultural or religious contexts. Additionally, there are societies where age is not measured in years, but in life stages or milestones. For example, a person may be considered an adult after completing a certain rite of passage, regardless of their actual age. These diverse perspectives on aging reflect the rich tapestry of human cultures around the world.</p>
+            <p>Additionally, advances in medical science and health care have increased life expectancy worldwide. As people live longer, the concept of age itself is evolving. Age is not just a number anymore. It encompasses a range of experiences, opportunities, and challenges. Society is grappling with questions about how to support an aging population, redefine retirement, and address issues related to ageism and ageism.</p>
+            <p>Finally, aging is a complex and multifaceted aspect of human existence, influenced by cultural, social, and biological factors. Although age can be quantified in a variety of ways, its true meaning goes beyond mere numbers. It encompasses the richness of individual experiences and the diversity of human societies. As we navigate the complexities of aging, may we seek to foster understanding, respect, and inclusion for people of all ages.</p>  
+          </div>
+  </div>
+    </main>
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+            <!-- Copyright Bar -->
+            <div class="footer-bottom">
+                <div class="row align-items-center g-2">
+
+                    <div class="col-12 col-md-6">
+                        <p class="mb-0"><b>
+                            &copy; <span id="currentYear"></span>
+                            <span id="copyrightName">My Website</span>.
+                            All rights reserved.
+                        </b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Automatic Copyright Year -->
+    <script>
+        (() => {
+            "use strict";
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+    <script src="ads.js"></script>
+</body>
+</html>
