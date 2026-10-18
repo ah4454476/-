@@ -1,17 +1,12 @@
-let parsedPosts = [];
-
-document.addEventListener("DOMContentLoaded", async function() {
+document.addEventListener("DOMContentLoaded", function() {
     // 1. Automatic Year Update
     const yearSpan = document.getElementById("current-year");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-    // 2. Load Data from Post HTML Files
-    await loadAllPostsData();
-
-    // 3. Render Dynamic Categories
+    // 2. Render Sidebar Categories
     renderSidebarCategories();
 
-    // 4. Render Home or Category Page Content
+    // 3. Render Home or Category Page Content
     if (document.getElementById("recent-posts-container")) {
         renderHomePosts();
     }
@@ -20,49 +15,17 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 });
 
-async function loadAllPostsData() {
-    parsedPosts = [];
-    // Duplicate URL Removal
-    const uniquePosts = [...new Set(blogPosts)];
-
-    for (let url of uniquePosts) {
-        try {
-            let response = await fetch(url);
-            if (!response.ok) continue;
-
-            let htmlText = await response.text();
-            let parser = new DOMParser();
-            let doc = parser.parseFromString(htmlText, 'text/html');
-
-            let title = doc.querySelector('title') ? doc.querySelector('title').innerText.split('-')[0].trim() : "Blog Post";
-            let rawCategory = doc.querySelector('meta[name="post-category"]') ? doc.querySelector('meta[name="post-category"]').content : "Recipes";
-            let image = doc.querySelector('meta[name="post-image"]') ? doc.querySelector('meta[name="post-image"]').content : "https://via.placeholder.com/300x200";
-            let snippet = doc.querySelector('meta[name="post-snippet"]') ? doc.querySelector('meta[name="post-snippet"]').content : "Click below to view full details...";
-
-            // Clean up categories (split by commas if multiple)
-            let categories = rawCategory.split(',').map(c => c.trim()).filter(c => c.length > 0);
-
-            parsedPosts.push({
-                url: url,
-                title: title,
-                categories: categories.length > 0 ? categories : ["Recipes"],
-                image: image,
-                snippet: snippet
-            });
-        } catch (e) {
-            console.error("Error loading post:", url, e);
-        }
-    }
-}
-
 function renderSidebarCategories() {
     const categoryContainers = document.querySelectorAll(".dynamic-categories");
     if (categoryContainers.length === 0) return;
 
     let categoryCounts = {};
-    parsedPosts.forEach(post => {
-        post.categories.forEach(cat => {
-            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+    blogPosts.forEach(post => {
+        let cats = post.category.split(',').map(c => c.trim());
+        cats.forEach(cat => {
+            if (cat) {
+                categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+            }
         });
     });
 
@@ -82,8 +45,8 @@ function renderHomePosts() {
     const popularContainer = document.getElementById("popular-posts-container");
 
     let recentHtml = '';
-    parsedPosts.forEach(post => {
-        let firstCategory = post.categories[0];
+    blogPosts.forEach(post => {
+        let firstCategory = post.category.split(',')[0].trim();
         recentHtml += `
             <div class="card mb-4">
                 <div class="row g-0">
@@ -107,7 +70,7 @@ function renderHomePosts() {
     if (popularContainer) {
         let popularHtml = '';
         let count = 1;
-        parsedPosts.slice(0, 5).forEach(post => {
+        blogPosts.slice(0, 5).forEach(post => {
             popularHtml += `
                 <li class="mb-3 pb-2 border-bottom">
                     <a href="${post.url}" class="text-dark text-decoration-none fw-semibold">${count}. ${post.title}</a>
@@ -125,10 +88,10 @@ function renderCategoryPosts() {
     const titleElem = document.getElementById("category-title");
     const container = document.getElementById("category-posts-container");
 
-    let filteredPosts = parsedPosts;
+    let filteredPosts = blogPosts;
     if (selectedCat) {
         if (titleElem) titleElem.textContent = selectedCat;
-        filteredPosts = parsedPosts.filter(p => p.categories.includes(selectedCat));
+        filteredPosts = blogPosts.filter(p => p.category.split(',').map(c => c.trim()).includes(selectedCat));
     } else {
         if (titleElem) titleElem.textContent = "All Categories";
     }
@@ -138,7 +101,7 @@ function renderCategoryPosts() {
         html = '<div class="col-12"><p class="text-muted">No recipes found in this category.</p></div>';
     } else {
         filteredPosts.forEach(post => {
-            let firstCategory = post.categories[0];
+            let firstCategory = post.category.split(',')[0].trim();
             html += `
                 <div class="col-md-6 mb-4">
                     <div class="card h-100">
