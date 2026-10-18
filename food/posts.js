@@ -1,0 +1,23 @@
+const blogPosts = [
+    "cranberry-apple-cider-american-homemade.html",
+    "crispy-japanese-rice-balls-recipe-easy.html",
+    "easy-homemade-chocolate-cake-recipe.html",
+    "meaty-spaghetti-american-homemade-recipe.html",
+    "sweet-sour-beef-american-homemade-recipe.html",
+    "desi-coffee.html",
+    "js-basics.html",
+    "desi-coffee.html",
+    "homemade.html",
+    "js-basics.html",
+    "desi-coffee.html",
+    "js-basics.html",
+    "desi-coffee.html",
+    "homemade.html",
+    "js-basics.html",
+    "desi-coffee.html",
+    "js-basics.html",
+    "desi-coffee.html",
+    "homemade.html",
+    "js-basics.html",
+    "desi-coffee.html"
+];
