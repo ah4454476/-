@@ -1,17 +1,17 @@
 let parsedPosts = [];
 
 document.addEventListener("DOMContentLoaded", async function() {
-    // 1. آٹومیٹک سال اپ ڈیٹ کرنا
+    // 1. Automatic Year Update
     const yearSpan = document.getElementById("current-year");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-    // 2. ایچ ٹی ایم ایل فائلوں سے ڈیٹا لوڈ کرنا
+    // 2. Load Data from Post HTML Files
     await loadAllPostsData();
 
-    // 3. سائیڈ بار کیٹگریز رینڈر کرنا
+    // 3. Render Dynamic Categories
     renderSidebarCategories();
 
-    // 4. ہوم پیج یا کیٹگری پیج کے مطابق رینڈرنگ
+    // 4. Render Home or Category Page Content
     if (document.getElementById("recent-posts-container")) {
         renderHomePosts();
     }
@@ -22,22 +22,30 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 async function loadAllPostsData() {
     parsedPosts = [];
-    for (let url of blogPosts) {
+    // Duplicate URL Removal
+    const uniquePosts = [...new Set(blogPosts)];
+
+    for (let url of uniquePosts) {
         try {
             let response = await fetch(url);
+            if (!response.ok) continue;
+
             let htmlText = await response.text();
             let parser = new DOMParser();
             let doc = parser.parseFromString(htmlText, 'text/html');
 
-            let title = doc.querySelector('title') ? doc.querySelector('title').innerText.split('-')[0].trim() : "بلاگ پوسٹ";
-            let category = doc.querySelector('meta[name="post-category"]') ? doc.querySelector('meta[name="post-category"]').content : "عام";
+            let title = doc.querySelector('title') ? doc.querySelector('title').innerText.split('-')[0].trim() : "Blog Post";
+            let rawCategory = doc.querySelector('meta[name="post-category"]') ? doc.querySelector('meta[name="post-category"]').content : "Recipes";
             let image = doc.querySelector('meta[name="post-image"]') ? doc.querySelector('meta[name="post-image"]').content : "https://via.placeholder.com/300x200";
-            let snippet = doc.querySelector('meta[name="post-snippet"]') ? doc.querySelector('meta[name="post-snippet"]').content : "تفصیلات کے لیے پوسٹ دیکھیں...";
+            let snippet = doc.querySelector('meta[name="post-snippet"]') ? doc.querySelector('meta[name="post-snippet"]').content : "Click below to view full details...";
+
+            // Clean up categories (split by commas if multiple)
+            let categories = rawCategory.split(',').map(c => c.trim()).filter(c => c.length > 0);
 
             parsedPosts.push({
                 url: url,
                 title: title,
-                category: category,
+                categories: categories.length > 0 ? categories : ["Recipes"],
                 image: image,
                 snippet: snippet
             });
@@ -53,7 +61,9 @@ function renderSidebarCategories() {
 
     let categoryCounts = {};
     parsedPosts.forEach(post => {
-        categoryCounts[post.category] = (categoryCounts[post.category] || 0) + 1;
+        post.categories.forEach(cat => {
+            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+        });
     });
 
     let html = '';
@@ -73,30 +83,31 @@ function renderHomePosts() {
 
     let recentHtml = '';
     parsedPosts.forEach(post => {
+        let firstCategory = post.categories[0];
         recentHtml += `
             <div class="card mb-4">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="${post.image}" class="img-fluid rounded-start h-100 object-fit-cover" alt="...">
+                        <img src="${post.image}" class="img-fluid rounded-start h-100 object-fit-cover" alt="${post.title}">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <a href="category.html?cat=${encodeURIComponent(post.category)}" class="badge badge-category mb-2">${post.category}</a>
+                            <a href="category.html?cat=${encodeURIComponent(firstCategory)}" class="badge badge-category mb-2">${firstCategory}</a>
                             <h3 class="card-title h5"><a href="${post.url}">${post.title}</a></h3>
                             <p class="card-text text-muted small">${post.snippet}</p>
-                            <a href="${post.url}" class="btn btn-sm btn-primary">مزید پڑھیں</a>
+                            <a href="${post.url}" class="btn btn-sm btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
         `;
     });
-    if (recentContainer) recentContainer.innerHTML = recentHtml;
+    if (recentContainer) recentContainer.innerHTML = recentHtml || '<p class="text-muted">No posts found.</p>';
 
     if (popularContainer) {
         let popularHtml = '';
         let count = 1;
-        parsedPosts.forEach(post => {
+        parsedPosts.slice(0, 5).forEach(post => {
             popularHtml += `
                 <li class="mb-3 pb-2 border-bottom">
                     <a href="${post.url}" class="text-dark text-decoration-none fw-semibold">${count}. ${post.title}</a>
@@ -117,26 +128,35 @@ function renderCategoryPosts() {
     let filteredPosts = parsedPosts;
     if (selectedCat) {
         if (titleElem) titleElem.textContent = selectedCat;
-        filteredPosts = parsedPosts.filter(p => p.category === selectedCat);
+        filteredPosts = parsedPosts.filter(p => p.categories.includes(selectedCat));
     } else {
-        if (titleElem) titleElem.textContent = "تمام کیٹگریز";
+        if (titleElem) titleElem.textContent = "All Categories";
     }
 
     let html = '';
-    filteredPosts.forEach(post => {
-        html += `
-            <div class="col-md-6 mb-4">
-                <div class="card h-100">
-                    <img src="${post.image}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <span class="badge badge-category mb-2">${post.category}</span>
-                        <h3 class="card-title h5"><a href="${post.url}">${post.title}</a></h3>
-                        <p class="card-text text-muted small">${post.snippet}</p>
-                        <a href="${post.url}" class="btn btn-sm btn-primary">پڑھیں</a>
+    if (filteredPosts.length === 0) {
+        html = '<div class="col-12"><p class="text-muted">No recipes found in this category.</p></div>';
+    } else {
+        filteredPosts.forEach(post => {
+            let firstCategory = post.categories[0];
+            html += `
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                        <div class="card-body d-flex flex-column">
+                            <div>
+                                <a href="category.html?cat=${encodeURIComponent(firstCategory)}" class="badge badge-category mb-2">${firstCategory}</a>
+                                <h3 class="card-title h5"><a href="${post.url}">${post.title}</a></h3>
+                                <p class="card-text text-muted small">${post.snippet}</p>
+                            </div>
+                            <div class="mt-auto pt-3">
+                                <a href="${post.url}" class="btn btn-sm btn-primary">Read More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-    });
+            `;
+        });
+    }
     if (container) container.innerHTML = html;
 }
