@@ -220,6 +220,24 @@ async function loadSinglePost() {
                 const parts = text.split('---');
                 let bodyText = parts.length >= 3 ? parts.slice(2).join('---') : text;
                 const postInfo = parsePostMeta(text, fileName);
+                
+                // --- WhatsApp Open Graph Meta Tags Dynamic Update ---
+                document.getElementById('meta-title').innerText = postInfo.title;
+                const ogTitle = document.getElementById('og-title');
+                if (ogTitle) ogTitle.content = postInfo.title;
+                
+                const ogDesc = document.getElementById('og-desc');
+                if (ogDesc) ogDesc.content = postInfo.description || "Check out this recipe on My Blog";
+                
+                if (postInfo.image) {
+                    const absoluteImgUrl = new URL(postInfo.image, window.location.origin).href;
+                    const ogImage = document.getElementById('og-image');
+                    if (ogImage) ogImage.content = absoluteImgUrl;
+                }
+                const ogUrl = document.getElementById('og-url');
+                if (ogUrl) ogUrl.content = window.location.href;
+                // ---------------------------------------------------
+
                 let catBadges = postInfo.categories.map(c => `<span class="badge bg-secondary me-1">${c}</span>`).join('');
                 let titleHtml = `<h1 class="h3 theme-heading">${postInfo.title}</h1><div class="mb-2">${catBadges} <span class="text-muted small ms-2">| ${postInfo.date}</span></div>${postInfo.description ? `<p class="text-muted">${postInfo.description}</p>` : ''}<hr>`;
                 
