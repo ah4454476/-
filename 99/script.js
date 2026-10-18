@@ -221,7 +221,7 @@ async function loadSinglePost() {
                 let bodyText = parts.length >= 3 ? parts.slice(2).join('---') : text;
                 const postInfo = parsePostMeta(text, fileName);
                 
-                // --- WhatsApp Open Graph Meta Tags Dynamic Update ---
+                // Open Graph Meta Tags update
                 document.getElementById('meta-title').innerText = postInfo.title;
                 const ogTitle = document.getElementById('og-title');
                 if (ogTitle) ogTitle.content = postInfo.title;
@@ -236,7 +236,16 @@ async function loadSinglePost() {
                 }
                 const ogUrl = document.getElementById('og-url');
                 if (ogUrl) ogUrl.content = window.location.href;
-                // ---------------------------------------------------
+
+                // Share Buttons Links Update
+                const currentUrl = window.location.href;
+                const shareText = encodeURIComponent(`Check out this amazing recipe: ${postInfo.title}\n\n${currentUrl}`);
+
+                const waBtn = document.getElementById('share-whatsapp');
+                if (waBtn) waBtn.href = `https://api.whatsapp.com/send?text=${shareText}`;
+
+                const fbBtn = document.getElementById('share-facebook');
+                if (fbBtn) fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
 
                 let catBadges = postInfo.categories.map(c => `<span class="badge bg-secondary me-1">${c}</span>`).join('');
                 let titleHtml = `<h1 class="h3 theme-heading">${postInfo.title}</h1><div class="mb-2">${catBadges} <span class="text-muted small ms-2">| ${postInfo.date}</span></div>${postInfo.description ? `<p class="text-muted">${postInfo.description}</p>` : ''}<hr>`;
@@ -245,4 +254,12 @@ async function loadSinglePost() {
             })
             .catch(() => { contentElem.innerHTML = '<p class="text-danger">Failed to load recipe.</p>'; });
     }
+}
+
+function copyPostLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Recipe link copied to clipboard!');
+    }).catch(err => {
+        console.error('Failed to copy link: ', err);
+    });
 }
