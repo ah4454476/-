@@ -1,0 +1,144 @@
+/* =================================================_
+   Global Styles & Maroon Theme (#800000)
+================================================= */
+:root {
+    --primary-maroon: #800000;
+    --primary-maroon-dark: #600000;
+    --bg-light: #f8f9fa;
+    --text-dark: #212529;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar & Header */
+.navbar-custom {
+    background-color: var(--primary-maroon) !important;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: #ffd700 !important;
+}
+
+/* Custom Buttons & Badges */
+.btn-maroon {
+    background-color: var(--primary-maroon);
+    color: #ffffff;
+    border: none;
+}
+
+.btn-maroon:hover {
+    background-color: var(--primary-maroon-dark);
+    color: #ffffff;
+}
+
+.badge-maroon {
+    background-color: var(--primary-maroon);
+    color: #ffffff;
+}
+
+/* Section Headings */
+.section-title {
+    border-left: 4px solid var(--primary-maroon);
+    padding-left: 10px;
+    font-weight: 700;
+    color: var(--primary-maroon);
+    margin-bottom: 20px;
+}
+
+/* Post Cards */
+.card-custom {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid rgba(128, 0, 0, 0.15);
+}
+
+.card-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(128, 0, 0, 0.15);
+}
+
+.card-title a {
+    color: var(--primary-maroon);
+    text-decoration: none;
+}
+
+.card-title a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar Styles */
+.sidebar-box {
+    background: #ffffff;
+    border: 1px solid rgba(128, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-maroon);
+    border-bottom: 2px solid var(--primary-maroon);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #dee2e6;
+}
+
+.category-list li a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.category-list li a:hover {
+    color: var(--primary-maround);
+    padding-left: 5px;
+    transition: 0.2s;
+}
+
+/* Full Black Footer */
+.footer-custom {
+    background-color: #000000 !important;
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 15px 0;
+    border-top: 3px solid var(--primary-maroon);
+}
+
+.footer-custom a {
+    color: #adb5bd;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.footer-custom a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

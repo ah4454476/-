@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "How to Build a Custom Solar Inverter Circuit at Home",
+    "categories": ["Electronics", "Solar"],
+    "date": "2026-10-30",
+    "image": "https://picsum.photos/800/400?random=1",
+    "content": "<p>Welcome to our comprehensive guide on building a custom solar inverter circuit. In this post, we explore how to integrate SPWM driver modules and IGBT power stages efficiently.</p><img src='https://picsum.photos/800/400?random=1' class='img-fluid rounded my-3' alt='Solar Circuit'><p>Make sure all connections are secure and follow proper safety precautions when handling high voltages.</p>"
+  },
+  {
+    "id": 2,
+    "title": "Delicious Homemade American Pancakes Recipe",
+    "categories": ["Recipes", "Food"],
+    "date": "2026-10-29",
+    "image": "https://picsum.photos/800/400?random=2",
+    "content": "<p>Nothing beats a warm stack of homemade American pancakes for breakfast. Follow these simple steps for a fluffy, golden-brown texture.</p><img src='https://picsum.photos/800/400?random=2' class='img-fluid rounded my-3' alt='Pancakes'><p>Serve hot with pure maple syrup and fresh butter.</p>"
+  },
+  {
+    "id": 3,
+    "title": "Getting Started with Lightweight Linux Desktop Environments",
+    "categories": ["Web Development", "Linux", "Electronics"],
+    "date": "2026-10-28",
+    "image": "https://picsum.photos/800/400?random=3",
+    "content": "<p>Explore why resource-efficient Linux desktop environments like XFCE and MATE are perfect for developers and technicians looking for speed and stability.</p><img src='https://picsum.photos/800/400?random=3' class='img-fluid rounded my-3' alt='Linux Desktop'><p>Customizing your workflow boosts productivity significantly.</p>"
+  },
+  {
+    "id": 4,
+    "title": "Building Responsive Static Web Apps without Backend CMS",
+    "categories": ["Web Development"],
+    "date": "2026-10-27",
+    "image": "https://picsum.photos/800/400?random=4",
+    "content": "<p>Learn how to architect lightning-fast static web portals using HTML5, Bootstrap 5, and vanilla JavaScript without relying on heavy databases or backend servers.</p><img src='https://picsum.photos/800/400?random=4' class='img-fluid rounded my-3' alt='Web Code'><p>Static hosting ensures 100% security and zero maintenance overhead.</p>"
+  },
+  {
+    "id": 5,
+    "title": "Designing a Heavy-Duty Electric Bicycle Conversion Kit",
+    "categories": ["Electronics", "Solar"],
+    "date": "2026-10-26",
+    "image": "https://picsum.photos/800/400?random=5",
+    "content": "<p>A hands-on engineering breakdown of converting standard bicycle frames using motorcycle wheels, sprockets, and heavy-duty drive chains.</p><img src='https://picsum.photos/800/400?random=5' class='img-fluid rounded my-3' alt='Electric Bike'><p>Testing phase and mechanical alignment tips for optimal torque.</p>"
+  },
+  {
+    "id": 6,
+    "title": "Refreshing Slow-Cooker Beverages for Cold Winter Evenings",
+    "categories": ["Recipes", "Food"],
+    "date": "2026-10-25",
+    "image": "https://picsum.photos/800/400?random=6",
+    "content": "<p>Discover comforting slow-cooker drink recipes designed to keep you warm and energized throughout long coding and testing sessions.</p><img src='https://picsum.photos/800/400?random=6' class='img-fluid rounded my-3' alt='Beverages'><p>Slow infusion brings out the richest aromatic spices.</p>"
+  }
+]

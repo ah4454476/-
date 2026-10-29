@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category - Static Blog</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">MODERKD Blog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu" id="nav-categories">
+                                <!-- Dynamic Categories populated via JS -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area with Static Sidebar -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Left Filtered Posts List -->
+            <div class="col-lg-8">
+                <h2 class="section-title mb-4" id="category-title">Category Posts</h2>
+                <div class="row" id="category-posts-container">
+                    <!-- Filtered posts will be injected here dynamically -->
+                </div>
+            </div>
+            
+            <!-- Right Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Box -->
+                <div class="sidebar-box">
+                    <h5 class="sidebar-title">Search Blog</h5>
+                    <div class="input-group">
+                        <input type="text" id="sidebar-search-input" class="form-control" placeholder="Search posts...">
+                        <button class="btn btn-maroon" type="button" id="sidebar-search-btn">Search</button>
+                    </div>
+                </div>
+
+                <!-- Categories Box -->
+                <div class="sidebar-box">
+                    <h5 class="sidebar-title">Categories</h5>
+                    <ul class="category-list" id="sidebar-categories-list">
+                        <!-- Dynamically loaded categories list -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Full Black Footer -->
+    <footer class="footer-custom">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <!-- Left Side: Legal Pages Links -->
+            <div class="mb-2 mb-md-0">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <!-- Right Side: Automatic Copyright Credit -->
+            <div>
+                &copy; <span id="current-year"></span> MODERKD. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom App JS -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Teminal:
+
+cd ~/Desktop/public
+python3 -m http.server 8000
+
+
+Firefox:
+
+http://localhost:8000
